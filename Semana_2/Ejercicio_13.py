@@ -6,11 +6,11 @@ y la cantidad de números cuya sumatoria de dígitos fue menor que 10.
 Utilizar una o más funciones, según sea necesario.
 '''
 #Funciones aux
-def boolToInt(valorBooleano):
+def boolToInt(valorBooleano:bool)->int:
   return 1 if valorBooleano else 0
-def maximoEntre(numero1, numero2):
+def maximoEntre(numero1:int, numero2:int)->int:
   return numero1 if numero1 > numero2 else numero2
-def sumarDigitos(num):
+def sumarDigitos(num:int)->int:
   #Describe la suma de los digitos de un numero.
     sumaDeDigitos = 0
     while num > 0:

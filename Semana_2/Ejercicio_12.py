@@ -8,7 +8,7 @@ por 10 sucesivamente y tomando el resto
 #Pedir numero
 variableString = (input("Ingrese un numero: "))
 #Funcion auxiliar
-def sumarDigitos(num):
+def sumarDigitos(num:int)->int:
   #Describe la suma de los digitos de un numero.
     sumaDeDigitos = 0
     while num > 0:

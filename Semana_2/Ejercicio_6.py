@@ -5,9 +5,9 @@ calcule el volumen de un cilindro usando la primera función
 #Para calcular el area de un circulo es A= Pi * radio**2
 #Para calcular el volumen de un cilindro es V = Area(circulo) * Altura(cilindro)
 
-def areaDeCirculoRadio_(radio):
+def areaDeCirculoRadio_(radio:int)->int:
   return 3.14 * radio**2
-def volumenDeCilindroRadio_Altura_(radio, altura):
+def volumenDeCilindroRadio_Altura_(radio:int, altura:int)->int:
   return areaDeCirculoRadio_(radio) * altura
 
 radio = 4

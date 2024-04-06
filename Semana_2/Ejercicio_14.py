@@ -6,7 +6,7 @@ Escribir un programa que solicita el ingreso de números primos.
  Utilizar una o más funciones, según sea necesario.
 """
 #Funciones auxiliares.
-def esNumPrimo(numero):
+def esNumPrimo(numero:int)->bool:
     if numero > 1:
         esPrimo = True
         divisor = 2
@@ -18,7 +18,7 @@ def esNumPrimo(numero):
         esPrimo = False
     return esPrimo
 
-def sumarDigitos(num):
+def sumarDigitos(num:int)->int:
   #Describe la suma de los digitos de un numero.
     sumaDeDigitos = 0
     while num > 0:
@@ -28,14 +28,14 @@ def sumarDigitos(num):
         num = num // 10
     return sumaDeDigitos
 
-def factorialDe_(unNumero):
+def factorialDe_(unNumero:int)->int:
   respuesta = 1
   while unNumero > 0:
     respuesta *= unNumero
     unNumero -= 1
   return respuesta
 
-def maximoEntre(numero1, numero2):
+def maximoEntre(numero1:int, numero2:int)->int:
   return numero1 if numero1 > numero2 else numero2
 
 #Inicio programa

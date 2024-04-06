@@ -3,7 +3,7 @@ Ejercicio 3
 Escribir una función que calcule
 y retorne el factorial de un número natural.
 '''
-def factorialDe_(unNumero):
+def factorialDe_(unNumero:int)->int:
   respuesta = 1
   while unNumero > 0:
     respuesta *= unNumero
@@ -19,7 +19,7 @@ Luego, usando esta función, escriba un programa que pida
 10 números al usuario por teclado y al finalizar 
 informe el mayor por pantalla.
 '''
-def maximoEntre(numero1, numero2):
+def maximoEntre(numero1:int, numero2:int)->int:
   return numero1 if numero1 > numero2 else numero2
 
 for i in range (10):
