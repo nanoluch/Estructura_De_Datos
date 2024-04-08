@@ -24,17 +24,17 @@ def sumarDigitos(num:int)->int:
 #Ingresar el primer valor
 ingreso = int(input("Ingrese un número: "))
 #Guardar el número como mayor sumatoria
-maxSumatoriaDeDigitos = sumarDigitos(str(ingreso))
+maxSumatoriaDeDigitos = sumarDigitos(ingreso)
 numeroMaximoSumado = ingreso;
 sumatoriasMenoresQue10 = 0;
 #Entrar al bucle si no es negativo
 while (ingreso >= 0):
-  if(maxSumatoriaDeDigitos < sumarDigitos(str(ingreso))):
+  if(maxSumatoriaDeDigitos < sumarDigitos(ingreso)):
     #Actualizar maximo
-    maxSumatoriaDeDigitos = sumarDigitos(str(ingreso))
+    maxSumatoriaDeDigitos = sumarDigitos(ingreso)
     numeroMaximoSumado = ingreso
   #Contar si suma menos que 10
-  sumatoriasMenoresQue10 += boolToInt(sumarDigitos(str(ingreso)) < 10)
+  sumatoriasMenoresQue10 += boolToInt(sumarDigitos(ingreso) < 10)
   #Volver a pedir ingreso
   ingreso = int(input("Ingrese un número: "))
 
