@@ -54,18 +54,5 @@ class Cancion:
         else:
             raise Exception(f"Las canciones no comparten genero y artista")
 
-cancionPrueba1 = Cancion(
-    "Medallo", "Blessd", Ejercicio_3.Tiempo(0,3,54),"rap", 2021, 5000
-)
-cancionPrueba2 = Cancion(
-    "Chulo", "Young Miko", Ejercicio_3.Tiempo(0,3,39),"rap", 2024, 7000
-)
-cancionPrueba3 = Cancion(
-    "Despechá", "Blessd", Ejercicio_3.Tiempo(0, 2, 37), "rap", 2022, 3000
-)
-print(cancionPrueba1)
-print(Cancion.mayorDuracion(cancionPrueba3, cancionPrueba2))
-print(Cancion.masVotada(cancionPrueba1, cancionPrueba3))
-    
 
 

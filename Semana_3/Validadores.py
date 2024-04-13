@@ -22,14 +22,14 @@ def validarTipo(varTest, tipo:type, varName:str):
         raise Exception(f"La variable {varName} debe ser un {tipo}")
     return salida
 
-def validarPositivo(numero:int, varName:str)->int:
+def validarPositivo(numero, varName:str)->int:
     salida = None #Se declara esta variable pero si no se llega a asignar un valor para el return, por defecto se devuelve el valor "None"
     if numero == 0:
         return int(0)
     elif numero > 0:
         salida = numero
     else:
-        raise Exception(varName + " debe ser un numero entero positivo.")
+        raise Exception(varName + " debe ser un numero  positivo.")
     return salida
 
 def validarNatural(numero, varName:str):
