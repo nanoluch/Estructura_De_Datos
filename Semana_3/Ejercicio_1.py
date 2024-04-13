@@ -24,19 +24,17 @@ Implementar las siguientes operaciones:
 import Validadores#Importa validadores generales.
 #Validadores generales para los ejercicios.
 
-def validarTipoYAnioConstruccion(anioConstruccion:int):
-    if Validadores.validarTipo(anioConstruccion, int, "anioConstruccion"):
-        salida = anioConstruccion if anioConstruccion >= 1870 else None
-    return salida
-
 class Propiedad:
     def __init__(self, calle:int, numero:int, localidad:str, anioConstruccion:int, cantidadAmbientes:int) -> None:
         self.__calle = Validadores.validarStrVacia(calle, "calle")
         self.__numero = Validadores.validarNatural(numero, "numero")
         self.__localidad = Validadores.validarStrVacia(localidad, "localidad")
-        self.__anioConstruccion = validarTipoYAnioConstruccion(anioConstruccion)
+        self.__anioConstruccion = self.validarTipoYAnioConstruccion(anioConstruccion)
         self.__cantidadAmbientes = Validadores.validarNatural(cantidadAmbientes, "cantidadAmbientes")
-    
+    def validarTipoYAnioConstruccion(anioConstruccion:int):
+        if Validadores.validarTipo(anioConstruccion, int, "anioConstruccion"):
+            salida = anioConstruccion if anioConstruccion >= 1870 else None
+        return salida
     def __repr__(self) -> str:
         return f"{self.__calle} {self.__numero} ({self.__localidad})"
     

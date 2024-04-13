@@ -26,14 +26,7 @@ class Cronometro:
     def tiempoEmpleado(self):
         return self.__tiempoFinal - self.__tiempoInicial
     
-tiempoPrueba1 = Ejercicio_3.Tiempo.tiempoDesdeSegundos(60)
-tiempoPrueba2 = Ejercicio_3.Tiempo.tiempoDesdeSegundos(120)
 
-cronometro1 = Cronometro(tiempoPrueba1, tiempoPrueba2)
-
-print("comenzar     " + str(cronometro1.comenzar()))
-print("finalizar    " + str(cronometro1.finalizar()))
-print(cronometro1.tiempoEmpleado())
 
 
 

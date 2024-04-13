@@ -22,12 +22,6 @@ tiene mayor cantidad de likes. En caso contrario debe lanzar una excepción.
 import Ejercicio_3, Validadores
 listaGeneros = ["rock", "jazz", "blues", "funk", "reggae", "rap"]
 
-def validarGenero(genero:str, varName:str ):
-    if genero.lower() in listaGeneros:
-        return genero
-    else:
-        raise Exception(f"El valor de {varName} no es un género válido.")
-
 
 
 class Cancion:
@@ -35,10 +29,17 @@ class Cancion:
         self.__nombre = Validadores.validarStrVacia(nombre, "nombre")
         self.__artista = Validadores.validarStrVacia(artista, "artista")
         self.__duracion = Validadores.validarTipo(duracion, Ejercicio_3.Tiempo, "duracion") #Es un dato del clase Tiempo
-        self.__generoMusical = validarGenero(generoMusical, "generoMusial")
+        self.__generoMusical = self.validarGenero(generoMusical, "generoMusial")
         self.__anioEdicion = Validadores.validarNatural(anioEdicion, "anioEdicion")
         self.__numLikes = Validadores.validarNatural(numLikes, "numLikes")
-    
+    listaGeneros = ["rock", "jazz", "blues", "funk", "reggae", "rap"]
+
+    def validarGenero(genero:str, varName:str ):
+        if genero.lower() in listaGeneros:
+            return genero
+        else:
+            raise Exception(f"El valor de {varName} no es un género válido.")
+
     def __repr__(self) -> str:
         return f"{self.__nombre} - {self.__artista} ({self.__duracion})"
     

@@ -11,17 +11,15 @@ Se deben implementar las siguientes operaciones:
 - mayorDuracion: Operación que recibe dos variables de tipo tiempo y retorna la de mayor duración.
 '''
 import Validadores
-def validarEnterosHasta(varTest:int,varName:str, max:int):
-    
-    
-    if(varTest < max):
-        return Validadores.validarNatural(varTest, varName)
+
 class Tiempo:
     def __init__(self, horas:int = 0, minutos:int = 0, segundos:int = 0) -> None:
         self.__horas = Validadores.validarNatural(horas, "horas")
-        self.__minutos = validarEnterosHasta(minutos, "minutos", 60)
-        self.__segundos = validarEnterosHasta(segundos, "segundos", 60)
-
+        self.__minutos = self.validarEnterosHasta(minutos, "minutos", 60)
+        self.__segundos = self.validarEnterosHasta(segundos, "segundos", 60)
+    def validarEnterosHasta(varTest:int,varName:str, max:int):
+        if(varTest < max):
+            return Validadores.validarNatural(varTest, varName)
     def __repr__(self) -> str:
         return f"{self.__horas} : {self.__minutos} : {self.__segundos}"
     

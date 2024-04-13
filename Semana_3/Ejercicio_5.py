@@ -47,7 +47,3 @@ class Cuadrado:
     def perimeto(self):
         return self.__lados.perimetro()
     
-
-cuadradoPrueba1 = Cuadrado(12.5)
-print(cuadradoPrueba1)
-print(cuadradoPrueba1.area())
